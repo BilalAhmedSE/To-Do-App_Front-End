@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App - Bilal Ahmed</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <nav class="nav-container">
+            <div class="nav">
+                <h1>Plan Your Day</h1>
+                <div class="nav-options">
+                    <a href="#">My Tasks</a>
+                    <a href="#">My Profile
+                        <i class="fa-regular fa-user"></i>
+                    </a>
+                </div>
+
+            </div>
+            <a href="#" id="hamburger"><i class="fa-solid fa-bars"></i></a>
+            <a href="#" id="closeNav"><i class="fa-solid fa-xmark"></i></a>
+
+        </nav>
+
+        <main>
+            <div class="main-container">
+                <div class="task-container">
+                    <div class="input-container">
+                        <h1>Create Tasks</h1>
+                        <div class="inp-field">
+                            <input type="text" autocomplete="off" id="input-task"
+                                placeholder="Write Anything You Want To Do.....">
+                            <button class="add">Add Task</button>
+                        </div>
+                    </div>
+                    <div class="task-board">
+                        <h2>Task Completed <br> 0 / 0</h2>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </main>
+        <ul id="list">
+            <h1>Your Tasks<i class="fa-solid fa-book"></i></h1>
+
+
+            <!-- <li>
+                <div class="left-task"><img class="circle" src="Images/Blank circle.png">
+                    <span class="line-throw">Tasks are here</span>
+                </div> <img class="delete" src="Images/Delete.png">
+            </li>
+            <li>
+                <div class="left-task"><img class="circle" src="Images/Blank circle.png">
+                    <span class="line-throw">Tasks are here</span>
+                </div> <img class="delete" src="Images/Delete.png">
+            </li> -->
+
+        </ul>
+
+
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
