@@ -5,11 +5,44 @@ let addBtn = document.querySelector(".add")
 let taskShow = document.querySelector(".task-board h2")
 
 
+
+
+
+
+window.addEventListener('DOMContentLoaded', loadtask)
+
 // initial value(s)
 
 let completedtask = 0;
 
 // main work 
+
+
+
+function saveList() {
+    const allTasks = [];
+
+    document.querySelectorAll("#list-container li").forEach((li) => {
+        const taskText = li.querySelector("span").innerText
+        const isDone = li.querySelector("span").classList.contains("line-throw")
+        allTasks.push({ task: taskText, completed: isDone })
+    });
+
+    localStorage.setItem("taskList", JSON.stringify(allTasks))
+}
+
+function loadtask() {
+    const storedTask = JSON.parse(localStorage.getItem("taskList")) || [];
+
+    storedTask.forEach((taskObj) => {
+        createTaskFromStorage(taskObj.task, taskObj.completed)
+    })
+}
+
+
+
+
+
 
 function updateCounter() {
     let totalTask = document.querySelectorAll('ul li').length
@@ -20,15 +53,24 @@ function createTask() {
     let task = taskInput.value.trim();
 
     if (task === '') {
-        taskInput.placeholder = 'Write Something'
+        taskInput.placeholder = 'Write Something Here Please!'
+        taskInput.placeholder.style.color = "red"
         return;
     }
+
+    createTaskFromStorage(task, false);
+    saveList();
+
+}
+
+function createTaskFromStorage(taskText, isCompleted) {
+
 
     // creating li 
 
     let li = document.createElement('li')
     let span = document.createElement("span")
-    span.innerText = task
+    span.innerText = taskText
 
 
 
@@ -44,6 +86,9 @@ function createTask() {
 
     let taskLeft = document.createElement("div")
     taskLeft.classList.add('left-task')
+
+    // Appending Child And parents
+
     taskLeft.appendChild(circle)
     taskLeft.appendChild(span)
 
@@ -53,11 +98,15 @@ function createTask() {
     document.querySelector('ul').appendChild(li)
     updateCounter()
 
+    // Events 
+
     circle.addEventListener("click", () => {
 
         let isCompleted = span.classList.toggle('line-throw')
 
+
         if (isCompleted) {
+
             circle.src = "images/check-circle.png"
             completedtask++
 
@@ -67,10 +116,12 @@ function createTask() {
             completedtask--
 
         }
-        updateCounter()
-
+        updateCounter();
+        saveList();
 
     })
+
+    // Delete Event
 
     deleteBtn.addEventListener('click', () => {
         li.remove()
@@ -78,18 +129,17 @@ function createTask() {
             completedtask--
 
         }
-        updateCounter()
+        updateCounter();
+        saveList();
     })
     taskInput.value = ''
     taskInput.placeholder = 'Write Anything You Want To Do.....'
-
-
-
-
 }
+
 
 addBtn.addEventListener('click', createTask)
 
+// Keyboard "Enter" Event
 
 taskInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {

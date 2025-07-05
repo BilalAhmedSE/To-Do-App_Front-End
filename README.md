@@ -7,6 +7,8 @@
 
 ## 🚀 Features
 
+ ## initial Features
+
 - ✅ **Add Tasks** by clicking the button or pressing `Enter`
 - ✅ **Mark as Completed** with a single click
 - ✅ **Delete Tasks** instantly
@@ -14,6 +16,10 @@
 - ✅ **Fully Responsive** — works on mobile, tablet, and desktop
 - ✅ **Dark-Themed UI** for better visual comfort
 - ✅ **Mobile Navigation Toggle** with hamburger menu
+
+## Updated Later
+
+- ✅ **Local Storage support** (so tasks stay after refresh) -- Updated On **5th July 2025**
 
 
 ---
@@ -57,7 +63,6 @@ plan-your-day/
 
 ## 💡 Future Improvements
 
-- [ ] Local Storage support (so tasks stay after refresh)
 - [ ] Edit task functionality
 - [ ] Category-based task filters
 - [ ] Light/Dark mode toggle

@@ -6,7 +6,11 @@
 }
 
 body {
-    background: linear-gradient(45deg, #020048, #11879E);
+
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #f1f1f1;
+    /* Light text for contrast */
+
     min-height: 100vh;
     height: auto;
     min-width: 100vw;
@@ -89,7 +93,7 @@ body {
     background: rgb(41, 40, 40);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px white;
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
     flex-basis: 1;
     flex-direction: column;
 }
@@ -109,7 +113,7 @@ body {
 }
 
 #input-task {
-    flex: 1;
+    width: 85%;
     height: 40px;
     border-radius: 20px;
     font-size: 20px;
@@ -143,7 +147,7 @@ body {
     background: rgb(41, 40, 40);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px white;
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
 
 }
 
@@ -157,7 +161,7 @@ body {
     background: rgb(41, 40, 40);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px white;
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
     width: 77%;
 }
 
