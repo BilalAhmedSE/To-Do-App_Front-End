@@ -129,7 +129,7 @@
 
     .input-container {
         width: 93%;
-        position: absolute;
+        position: fixed;
         bottom: 0;
         margin-bottom: 10px;
         z-index: 20;
