@@ -1,5 +1,4 @@
-/* input-container resposive */
-
+/* ======= Responsive: Max Width 930px ======= */
 @media screen and (max-width: 930px) {
     .input-container h1 {
         font-size: 35px;
@@ -31,15 +30,14 @@
 
     .task-board {
         width: 41%;
-
     }
 
     .container ul {
         width: 93%;
     }
-
 }
 
+/* ======= Responsive: Max Width 670px ======= */
 @media screen and (max-width: 670px) {
     .nav {
         display: none;
@@ -59,36 +57,97 @@
         position: absolute;
         z-index: 99;
     }
+
+    .responsiveName {
+        display: block;
+    }
+
+    .nav-container {
+        height: 40px;
+        width: 100%;
+        background: black;
+        margin-bottom: 20px;
+        position: fixed;
+        z-index: 21;
+        top: 0;
+        border-radius: 0 0 12px 12px;
+    }
+
+    .task-container {
+        margin-top: 70px;
+    }
 }
 
+/* ======= Responsive: Max Width 560px ======= */
 @media screen and (max-width: 560px) {
+    .input-container {
+        padding: 10px;
+        background: transparent;
+    }
+
+    .task-container {
+        margin-top: 0;
+    }
+
+    .nav-container {
+        height: 40px;
+        width: 100%;
+        background: black;
+        margin-bottom: 20px;
+        position: fixed;
+        z-index: 21;
+        top: 0;
+        border-radius: 0 0 12px 12px;
+    }
+
+
     .task-container {
         display: flex;
         flex-direction: column;
     }
 
-    .input-container {
-        width: 95%;
+    .inp-field {
+        display: flex;
+        flex-direction: row;
     }
 
-    .task-board {
-        width: 95%;
-        font-size: 19px;
+    .add {
+        width: 14%;
+        display: none;
     }
 
-    .container ul {
-        width: 90%;
-        margin-bottom: 10px;
-    }
-
-    .input-container h1 {
-        margin-top: -22px;
-        margin-bottom: -5px;
-        font-size: 25px;
+    .responsive-add-btn {
+        display: block;
     }
 
     #input-task {
+        height: 47px;
+        border-radius: 30px;
+        width: 90%;
         font-size: 18px;
+    }
+
+    .input-container {
+        width: 93%;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 10px;
+        z-index: 20;
+    }
+
+    .task-board {
+        width: 97%;
+        font-size: 19px;
+        margin-top: 60px;
+    }
+
+    .container ul {
+        width: 92%;
+        margin-bottom: 10px;
+    }
+
+    .createTask {
+        display: none;
     }
 
     .left-task span {
@@ -110,7 +169,6 @@
         margin-top: 38px;
         z-index: 2;
         margin-left: 38px;
-
     }
 
     .nav-options {
@@ -121,5 +179,35 @@
 
     .nav-options a {
         margin-bottom: 20px;
+        border-bottom: 1px solid white;
+    }
+}
+
+/* ======= Responsive: Max Width 440px ======= */
+@media screen and (max-width: 440px) {
+
+    .inp-field {
+        gap: 5px;
+    }
+
+    #input-task {
+        font-size: 15px;
+    }
+}
+
+/* ======= Responsive: Max Width 345px ======= */
+@media screen and (max-width: 345px) {
+    #input-task {
+        height: 40px;
+        font-size: 13px;
+    }
+
+    .responsive-add-btn {
+        height: 45px;
+        width: 45px;
+    }
+
+    .inp-field {
+        gap: 5px;
     }
 }

@@ -1,3 +1,4 @@
+/* ======= Global Styles ======= */
 * {
     padding: 0;
     margin: 0;
@@ -6,11 +7,9 @@
 }
 
 body {
-
     background: linear-gradient(135deg, #1f1c2c, #928dab);
     color: #f1f1f1;
     /* Light text for contrast */
-
     min-height: 100vh;
     height: auto;
     min-width: 100vw;
@@ -18,13 +17,8 @@ body {
     background-repeat: no-repeat;
 }
 
+/* ======= Navbar Section ======= */
 
-
-/* navbar  */
-.nav-container {
-    height: 50px;
-    width: 100%;
-}
 
 .nav {
     height: 50px;
@@ -35,7 +29,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
 }
 
 #hamburger {
@@ -43,7 +36,18 @@ body {
     font-size: 30px;
     margin-left: 20px;
     display: none;
+}
 
+.responsiveName {
+    display: none;
+    position: fixed;
+    right: 0;
+    margin-right: 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    z-index: 1;
 }
 
 #closeNav {
@@ -53,11 +57,9 @@ body {
     display: none;
 }
 
-
 .nav h1 {
     margin-left: 30px;
 }
-
 
 .nav a {
     text-decoration: none;
@@ -71,20 +73,29 @@ body {
     margin-left: 5px;
 }
 
-/* main content */
+.change-name {
+    display: none;
+}
+
+.changeNameDisplayShow {
+    display: inline;
+}
+
+/* ======= Main Content Section ======= */
+
+
 
 .main-container {
     margin-top: 40px;
     margin-left: 30px;
 }
 
-
 .task-container {
     display: flex;
     gap: 23px;
 }
 
-
+/* ======= Task Input Container ======= */
 .input-container {
     display: flex;
     gap: 10px;
@@ -102,11 +113,8 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-
     align-items: center;
 }
-
-
 
 .input-container h1 {
     font-size: 41px;
@@ -121,7 +129,7 @@ body {
     padding-left: 10px;
     border: none;
     outline: none;
-    box-shadow: 0 2px 5px rgb(83, 249, 211);
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
 }
 
 .add {
@@ -132,7 +140,7 @@ body {
     color: white;
     border-radius: 20px;
     padding: 10px;
-    box-shadow: 0 2px 3px rgb(83, 249, 211);
+    box-shadow: 0 2px 3px rgb(0, 0, 0);
     cursor: pointer;
     transition: all .2s ease-in-out;
 }
@@ -141,6 +149,22 @@ body {
     transform: scale(0.95);
 }
 
+.responsive-add-btn {
+    border-radius: 100%;
+    color: transparent;
+    background-image: url(images/add-btn.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 27px;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    display: none;
+    border: none;
+    box-shadow: 0 2px 5px black;
+}
+
+/* ======= Task Completion Box ======= */
 .task-board {
     font-size: 25px;
     width: 24%;
@@ -148,13 +172,9 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgb(0, 0, 0);
-
 }
 
-/* task-list */
-
-
-
+/* ======= Task List Section ======= */
 .container ul {
     margin-top: 15px;
     margin-left: 30px;
@@ -186,7 +206,6 @@ ul h1 {
 ul h1 i {
     font-size: 30px;
     margin-right: 20px;
-
 }
 
 .left-task {
@@ -196,7 +215,6 @@ ul h1 i {
 
 .left-task span {
     margin-left: 20px;
-
 }
 
 .left-task img.circle {
@@ -217,4 +235,53 @@ ul h1 i {
     text-decoration: line-through;
     color: grey;
     opacity: 0.6;
+}
+
+/* Hide container initially (until user enters name) */
+.container {
+    display: none;
+}
+
+/* ======= Name Input Page ======= */
+.userIntroPage {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.userInfoContainer {
+    margin-top: 100px;
+    height: 300px;
+    width: 700px;
+    text-align: center;
+}
+
+.userInfoContainer h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.name-input {
+    height: 40px;
+    width: 400px;
+    border-radius: 20px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 70px;
+}
+
+.continue {
+    font-size: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: 400;
+    background: transparent;
+    color: white;
+    cursor: pointer;
 }

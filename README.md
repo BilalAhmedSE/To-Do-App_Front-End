@@ -7,7 +7,7 @@
 
 ## 🚀 Features
 
- ## initial Features
+### Initial Features
 
 - ✅ **Add Tasks** by clicking the button or pressing `Enter`
 - ✅ **Mark as Completed** with a single click
@@ -17,10 +17,9 @@
 - ✅ **Dark-Themed UI** for better visual comfort
 - ✅ **Mobile Navigation Toggle** with hamburger menu
 
-## Updated Later
+### Updated Later
 
-- ✅ **Local Storage support** (so tasks stay after refresh) -- Updated On **5th July 2025**
-
+- ✅ **Local Storage support** (so tasks stay after refresh) — Updated On **5th July 2025**
 
 ---
 
@@ -53,11 +52,11 @@ plan-your-day/
 
 ## 📱 Responsive Design
 
-| Screen Size | Layout |
-|-------------|--------|
-| Desktop     | Side-by-side task creation and counter |
-| Tablet      | Responsive inputs and list |
-| Mobile      | Stacked layout with a hamburger menu |
+| Screen Size | Layout                                      |
+|-------------|---------------------------------------------|
+| Desktop     | Side-by-side task creation and counter      |
+| Tablet      | Responsive inputs and list                  |
+| Mobile      | Stacked layout with a hamburger menu        |
 
 ---
 
@@ -88,3 +87,9 @@ Want to connect or collaborate?
 
 If you like this project, please consider giving it a ⭐️ on GitHub. It motivates me to build more!
 
+---
+
+## 📌 Note
+
+The entire codebase (HTML, CSS, and JavaScript) has been written by **Bilal Ahmed**.  
+Only the **comments and structural formatting improvements** were added with the help of AI to enhance readability and documentation clarity.

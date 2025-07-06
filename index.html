@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do App - Bilal Ahmed</title>
+
+    <!-- ======= Stylesheets ======= -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -14,62 +16,83 @@
 
 <body>
     <div class="container">
+
+        <!-- ======= Navigation Bar ======= -->
         <nav class="nav-container">
             <div class="nav">
                 <h1>Plan Your Day</h1>
                 <div class="nav-options">
                     <a href="#">My Tasks</a>
-                    <a href="#">My Profile
+                    <a href="#" class="profileName" id="event-change-name">My Profile
                         <i class="fa-regular fa-user"></i>
                     </a>
+                    <a href="#" class="change-name">Change Name</a>
                 </div>
-
             </div>
+
+            <!-- ======= Hamburger and Close Icons ======= -->
             <a href="#" id="hamburger"><i class="fa-solid fa-bars"></i></a>
             <a href="#" id="closeNav"><i class="fa-solid fa-xmark"></i></a>
 
+            <!-- ======= Responsive Profile ======= -->
+            <a href="#" class="profileName responsiveName">My Profile
+                <i class="fa-regular fa-user"></i>
+            </a>
         </nav>
 
-        <main>
+        <!-- ======= Main Content Section ======= -->
+        <main class="containerMain">
             <div class="main-container">
+
+                <!-- ======= Task Input Section ======= -->
                 <div class="task-container">
                     <div class="input-container">
-                        <h1>Create Tasks</h1>
+                        <h1 class="createTask">Create Tasks</h1>
                         <div class="inp-field">
                             <input type="text" autocomplete="off" id="input-task"
                                 placeholder="Write Anything You Want To Do.....">
                             <button class="add">Add Task</button>
+                            <button class="responsive-add-btn"></button>
                         </div>
                     </div>
+
+                    <!-- ======= Task Board (Completion Counter) ======= -->
                     <div class="task-board">
                         <h2>Task Completed <br> 0 / 0</h2>
                     </div>
                 </div>
 
             </div>
-
-
         </main>
+
+        <!-- ======= Task List Section ======= -->
         <ul id="list-container">
             <h1>Your Tasks<i class="fa-solid fa-book"></i></h1>
 
-
-            <!-- <li>
-                <div class="left-task"><img class="circle" src="Images/Blank circle.png">
-                    <span class="line-throw">Tasks are here</span>
-                </div> <img class="delete" src="Images/Delete.png">
-            </li>
+            <!-- Sample Task Items (Commented) -->
+            <!-- 
             <li>
                 <div class="left-task"><img class="circle" src="Images/Blank circle.png">
                     <span class="line-throw">Tasks are here</span>
                 </div> <img class="delete" src="Images/Delete.png">
-            </li> -->
-
+            </li>
+            -->
         </ul>
-
-
-
     </div>
+
+    <!-- ======= Name Input Page (Intro) ======= -->
+    <div class="userIntroPage">
+        <div class="userInfoContainer">
+            <h1 class="nameQuestion">Hey! What's Your Name?</h1>
+            <div class="name-input-field">
+                <input type="text" class="name-input" placeholder="Enter Your Name" autocorrect="off"
+                    autocomplete="off">
+            </div>
+            <button class="continue">Continue</button>
+        </div>
+    </div>
+
+    <!-- ======= JavaScript File ======= -->
     <script src="script.js"></script>
 </body>
 
