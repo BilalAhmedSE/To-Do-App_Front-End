@@ -197,6 +197,11 @@ body {
     width: 77%;
 }
 
+.task-list-wrapper::-webkit-scrollbar{
+    background: rgb(41, 40, 40);
+    border-radius: 12px;
+}
+
 
 .container ul li {
     height: 30px;

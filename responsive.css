@@ -82,10 +82,14 @@
 /* ======= Responsive: Max Width 560px ======= */
 @media screen and (max-width: 560px) {
 
+    body {
+        height: auto;
+        overflow-y: auto;
+    }
 
 
     .task-list-wrapper {
-        max-height: 60vh;
+        max-height: calc(100vh - 250px);
         width: 92%;
         margin-left: 21px;
         margin-right: auto;
