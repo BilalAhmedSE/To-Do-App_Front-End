@@ -179,12 +179,25 @@ body {
 .container ul {
     margin-top: 15px;
     margin-left: 30px;
+    background: transparent;
+    border-radius: 10px;
+    width: 95%;
+    padding-bottom: 70px;
+}
+
+
+.task-list-wrapper {
+    max-height: 50vh;
+    /* Adjust this if needed */
+    overflow-y: auto;
+    margin-top: 15px;
+    margin-left: 30px;
     background: rgb(41, 40, 40);
-    padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgb(0, 0, 0);
     width: 77%;
 }
+
 
 .container ul li {
     height: 30px;

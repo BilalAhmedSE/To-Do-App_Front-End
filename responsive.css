@@ -32,7 +32,8 @@
         width: 41%;
     }
 
-    .container ul {
+
+    .task-list-wrapper {
         width: 93%;
     }
 }
@@ -80,6 +81,21 @@
 
 /* ======= Responsive: Max Width 560px ======= */
 @media screen and (max-width: 560px) {
+
+
+
+    .task-list-wrapper {
+        max-height: 60vh;
+        width: 92%;
+        margin-left: 21px;
+        margin-right: auto;
+    }
+
+    .task-list-wrapper ul {
+        width: 100%;
+    }
+
+
     .input-container {
         padding: 10px;
         background: transparent;
@@ -133,6 +149,7 @@
         bottom: 0;
         margin-bottom: 10px;
         z-index: 20;
+        margin-top: 20px;
     }
 
     .task-board {

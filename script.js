@@ -242,3 +242,5 @@ window.addEventListener("resize", () => {
         taskInput.scrollIntoView({ behavior: "smooth", block: "center" });
     }
 });
+
+
