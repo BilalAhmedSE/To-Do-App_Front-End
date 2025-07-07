@@ -133,6 +133,18 @@ body {
     box-shadow: 0 2px 5px rgb(0, 0, 0);
 }
 
+#input-task-mobile {
+    width: 85%;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+}
+
 .add {
     font-size: 19px;
     border: none;
@@ -195,9 +207,10 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgb(0, 0, 0);
     width: 77%;
+    margin-bottom: 50px;
 }
 
-.task-list-wrapper::-webkit-scrollbar{
+.task-list-wrapper::-webkit-scrollbar {
     background: rgb(41, 40, 40);
     border-radius: 12px;
 }
@@ -253,6 +266,10 @@ ul h1 i {
     text-decoration: line-through;
     color: grey;
     opacity: 0.6;
+}
+
+.input-container-responsive {
+    display: none;
 }
 
 /* Hide container initially (until user enters name) */

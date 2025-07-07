@@ -2,6 +2,7 @@
 // 🌟 Selecting HTML Elements
 // ===============================
 let taskInput = document.querySelector("#input-task");
+let taskInputMobile = document.querySelector("#input-task-mobile")
 let addBtn = document.querySelector(".add");
 let taskShow = document.querySelector(".task-board h2");
 let respAddBtn = document.querySelector(".responsive-add-btn");
@@ -62,18 +63,23 @@ function updateCounter() {
 // ===============================
 // ➕ Create New Task (from input)
 // ===============================
-function createTask() {
-    let task = taskInput.value.trim();
+function createTask(inputElement) {
+    let task = inputElement.value.trim();
     if (task === "") {
-        taskInput.placeholder = "Write Something Here Please!";
-        taskInput.style.border = "2px solid Red";
+        inputElement.placeholder = "Write Something Here Please!";
+        inputElement.style.border = "2px solid Red";
         return;
     } else {
-        taskInput.style.border = "none";
+        inputElement.style.border = "none";
     }
 
     createTaskFromStorage(task, false);
     saveList();
+
+
+    inputElement.value = '';
+    inputElement.placeholder = 'Write AnyThing You Want To Do....'
+
 }
 
 // ===============================
@@ -144,17 +150,27 @@ function createTaskFromStorage(taskText, isCompleted) {
 // ===============================
 // 🖱️ Add Task via Click
 // ===============================
-addBtn.addEventListener("click", createTask);
-respAddBtn.addEventListener("click", createTask);
+addBtn.addEventListener("click", () => {
+    createTask(taskInput)
+});
+respAddBtn.addEventListener("click", () => {
+    createTask(taskInputMobile)
+})
 
 // ===============================
 // ⌨️ Add Task via Enter Key
 // ===============================
 taskInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
-        createTask();
+        createTask(taskInput);
     }
 });
+
+taskInputMobile.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        createTask(taskInputMobile)
+    }
+})
 
 // ===============================
 // 📱 Mobile Navigation Toggle

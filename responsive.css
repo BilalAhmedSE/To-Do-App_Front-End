@@ -8,7 +8,8 @@
         gap: 19px;
     }
 
-    #input-task {
+
+    #input-task-mobile {
         font-size: 16px;
         width: 100%;
         height: 30px;
@@ -38,8 +39,18 @@
     }
 }
 
+
 /* ======= Responsive: Max Width 670px ======= */
 @media screen and (max-width: 670px) {
+    .input-container-big-screen {
+        margin: 0 0 0 10px;
+    }
+
+    .task-board {
+        width: 40%;
+    }
+
+
     .nav {
         display: none;
     }
@@ -82,6 +93,10 @@
 /* ======= Responsive: Max Width 560px ======= */
 @media screen and (max-width: 560px) {
 
+    .input-container-big-screen {
+        display: none;
+    }
+
     body {
         height: auto;
         overflow-y: auto;
@@ -100,13 +115,21 @@
     }
 
 
-    .input-container {
+    .input-container-responsive {
         padding: 10px;
         background: transparent;
+        display: flex;
+        width: 93%;
+        position: absolute;
+        bottom: 0;
+        margin-bottom: 10px;
+        z-index: 20;
+        margin-top: 20px;
+        margin: 20px 17px 10px;
     }
 
-    .task-container {
-        margin-top: 0;
+    .input-field-mobile {
+        gap: 5px;
     }
 
     .nav-container {
@@ -124,10 +147,10 @@
     .task-container {
         display: flex;
         flex-direction: column;
+        margin-top: 0;
     }
 
     .inp-field {
-        display: flex;
         flex-direction: row;
     }
 
@@ -140,21 +163,13 @@
         display: block;
     }
 
-    #input-task {
+    #input-task-mobile {
         height: 47px;
         border-radius: 30px;
         width: 90%;
         font-size: 18px;
     }
 
-    .input-container {
-        width: 93%;
-        position: absolute;
-        bottom: 0;
-        margin-bottom: 10px;
-        z-index: 20;
-        margin-top: 20px;
-    }
 
     .task-board {
         width: 97%;
@@ -174,10 +189,6 @@
     .left-task span {
         margin-left: -10px;
         font-size: 13px;
-    }
-
-    body {
-        transition: all .1s ease;
     }
 
     .nav {
@@ -211,14 +222,14 @@
         gap: 5px;
     }
 
-    #input-task {
+    #input-task-mobile {
         font-size: 15px;
     }
 }
 
 /* ======= Responsive: Max Width 345px ======= */
 @media screen and (max-width: 345px) {
-    #input-task {
+    #input-task-mobile {
         height: 40px;
         font-size: 13px;
     }
