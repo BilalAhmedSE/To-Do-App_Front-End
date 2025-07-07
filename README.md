@@ -60,15 +60,6 @@ plan-your-day/
 
 ---
 
-## 💡 Future Improvements
-
-- [ ] Edit task functionality
-- [ ] Category-based task filters
-- [ ] Light/Dark mode toggle
-- [ ] Task deadlines and reminders
-
----
-
 ## 🙌 Acknowledgements
 
 Made with ❤️ by **Bilal Ahmed**  
